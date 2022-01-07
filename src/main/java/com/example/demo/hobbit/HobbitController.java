@@ -1,4 +1,4 @@
-package com.example.hobbit;
+package com.example.demo.hobbit;
 
 public class HobbitController {
 }
