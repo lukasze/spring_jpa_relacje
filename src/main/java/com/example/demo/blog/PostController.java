@@ -1,4 +1,4 @@
-package com.example.demo.hobbit;
+package com.example.demo.blog;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -7,13 +7,13 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-public class HobbitController {
+public class PostController {
 
     @Autowired
-    private HobbitService hobbitService;
+    private PostRepository postRepository;
 
-    @GetMapping("/hobbits")
-    List<Hobbit> findAll() {
-        return hobbitService.findAll();
+    @GetMapping("/posts")
+    List<Post> findAll() {
+        return postRepository.findAll();
     }
 }
