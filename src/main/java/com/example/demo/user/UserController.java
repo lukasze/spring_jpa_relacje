@@ -1,4 +1,4 @@
-package com.example.demo.hobbit;
+package com.example.demo.user;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -7,13 +7,13 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-public class HobbitController {
+public class UserController {
 
     @Autowired
-    private HobbitService hobbitService;
+    private UserRepository userRepository;
 
-    @GetMapping("/hobbits")
-    List<Hobbit> findAll() {
-        return hobbitService.findAll();
+    @GetMapping("/users")
+    List<User> findAll() {
+        return userRepository.findAll();
     }
 }
